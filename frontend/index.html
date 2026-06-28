@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit of Today</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>👗 Outfit of Today</h1>
+    </header>
+    <!-- Météo -->
+    <section id="meteo">
+        <h2>🌤️ Météo du jour</h2>
+        <div style="display:flex; gap:10px;">
+            <input type="text" id="ville" placeholder="Ville (ex: Bruxelles)" style="margin-bottom:0">
+            <button onclick="chargerMeteo()" style="width:auto; padding: 10px 20px;">OK</button>
+        </div>
+        <div id="meteo-result" style="margin-top:16px; font-size:1.1rem;"></div>
+    </section>
+    <main>
+        <!-- Formulaire ajout vêtement -->
+        <section id="ajout">
+            <h2>Ajouter un vêtement</h2>
+            <input type="text" id="nom" placeholder="Nom (ex: Jean bleu)">
+            <select id="categorie">
+                <option value="haut">Haut</option>
+                <option value="bas">Bas</option>
+                <option value="chaussures">Chaussures</option>
+                <option value="accessoire">Accessoire</option>
+            </select>
+            <input type="text" id="couleur" placeholder="Couleur">
+            <div id="style-options">
+                <label><input type="checkbox" value="casual"> Pour tout les jours</label>
+                <label><input type="checkbox" value="sport"> Sport</label>
+                <label><input type="checkbox" value="elegant"> Élégant</label>
+            </div>
+            <button onclick="ajouterVetement()">Ajouter</button>
+        </section>
+
+        <!-- Liste vêtements -->
+        <section id="dressing">
+            <h2>Mon dressing</h2>
+            <div id="liste-vetements"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
